@@ -31,13 +31,13 @@ const Nav = (props) => {
 
   return (
     <div className='nav'>
-      <h1><Link to="/" className='nav-title'>Searchinng</Link></h1>
+      <h1><Link to="/web-photo" className='nav-title'>Searchinng</Link></h1>
       <Input setInput={props.setInput} search={props.search}/>
       <ul>
         <li className='nav-page' onClick={pageHandler}>
           <a href="#"><AiFillHome /></a>
           <ul className={"nav-page__description" + (pageShow?" show":"")}>
-            <li><Link to="/">Home</Link></li>
+            <li><Link to="/web-photo">Home</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/search">Search</Link></li>
           </ul>

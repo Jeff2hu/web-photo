@@ -76,7 +76,7 @@ function App() {
                     : setCurrentSearch(input);
                       search(inputSearch)}}/>
       <Routes>
-        <Route path='/' element={<HomePage data={homeData} input={setCurrentSearch}/>} />
+        <Route path='/web-photo' element={<HomePage data={homeData} input={setCurrentSearch}/>} />
         <Route path='/about' element={<About />} />
         <Route path='/search' element={<Search data={data} search={moreSearch}/>} />
       </Routes>
