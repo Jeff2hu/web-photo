@@ -1,0 +1,28 @@
+.recommend{
+  @include d-flex;
+  flex-direction: column;
+  margin: 50px 0;
+  &-title{
+    background-color: black;
+    width: 100%;
+    line-height: 4rem;
+    font-size: 32px;
+    @include d-flex(space-around);
+    h3{
+      color:white;
+      font-size: 40px;
+    }
+    button{
+      cursor:pointer;
+      border: none;
+      background-color: black;
+      color:white;
+      padding: 10px;
+      letter-spacing: 1px;
+      border-radius: 20px;
+      margin: 10px 30px;
+      font-size: 18px;
+      @include primary-hover;
+    }
+  }
+}

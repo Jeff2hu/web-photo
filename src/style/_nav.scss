@@ -1,0 +1,114 @@
+.nav{
+  @include d-flex(space-around);
+  background-color: black;
+  color:white;
+  padding: 20px;
+  &-title{
+    color: white;
+    text-decoration: none;
+  }
+  >ul{
+    @include d-flex;
+    font-size: 24px;
+  }
+  &-page{
+    display: block;
+    position: relative;
+    background-color: var(--primary);
+    border-radius: 30px;
+    margin-left:30px;
+    &:hover{
+      background-color: #9c4e1b;
+    }
+    a{
+      color:white;
+      padding: 8px;
+    }
+    &__description{
+      display: none;
+      padding: 20px 2px;
+      background-color: var(--primary);
+      border-radius: 20px;
+      @include position-poa(69px,-30px,0,0);
+      z-index: 100;
+      &::before{
+        content:"";
+        width: 0px;
+        height: 0px;
+        @include position-poa(-20px,40px,0,0);
+        border: 10px solid;
+        border-color:transparent transparent transparent var(--primary);
+        transform: rotate(-90deg);
+      }
+      a{
+        color:white;
+        text-align: center;
+        @include primary-hover;
+      }
+    }
+  }
+  &-remind{
+    display: block;
+    margin-left: 20px;
+    position: relative;
+    background-color: var(--primary);
+    border-radius: 30px;
+    @include primary-hover;
+    a{
+      color:white;
+      padding: 8px;
+    }
+    &__description{
+      display: none;
+      width: 260px;
+      @include position-poa(69px,-240px,0,0);
+      z-index: 100;
+      background-color: var(--primary);
+      padding: 10px;
+      &::before{
+        content:"";
+        width: 0px;
+        height: 0px;
+        @include position-poa(-20px,250px,0,0);
+        border: 10px solid;
+        border-color:black black black var(--primary);
+        transform: rotate(-90deg);
+      }
+      a{
+        color:white;
+        font-size: 14px;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 5px;
+        line-height: 20px;
+        @include primary-hover;
+      }
+    }
+  }
+}
+
+.topJump{
+  position: fixed;
+  display: none;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  padding: 3px 5px 0 5px;
+  font-size: 24px;
+  border-radius: 50%;
+  color:white;
+  background-color: var(--primary);
+  @include primary-hover;
+}
+.topShow{
+  display: block;
+}
+
+.nav{
+  @media(max-width:768px) {
+    flex-direction: column;
+    &-title{
+      font-size: 60px;
+      margin-bottom: 30px;
+    }
+  }
+}

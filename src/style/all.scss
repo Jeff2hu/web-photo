@@ -1,0 +1,50 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+}
+a{
+  display: block;
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+
+:root{
+  --primary:#755e4e;
+  --secondary:#9c4e1b;
+}
+
+@mixin d-flex($justify:center,$align:center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin position-poa($top:0,$left:0,$X:-50%,$Y:-50%){
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate($X,$Y);
+}
+
+@mixin primary-hover{
+  &:hover{
+    background-color:var(--secondary);
+  }
+}
+
+
+.show{
+  display: block !important;
+}
+
+@import "./nav.scss";
+@import "./input.scss";
+@import "./homePage.scss";
+@import "./footer.scss";
+@import "./pictures.scss";
+@import "./about.scss";
+@import "./search.scss";
+@import "./recommend.scss";

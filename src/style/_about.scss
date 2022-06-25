@@ -1,0 +1,64 @@
+.about{
+  width: 960px;
+  margin: 0 auto;
+  font-size: 24px;
+  h2{
+    margin: 50px 0;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #000;
+    text-align: center;
+  }
+  >p{
+    margin-left: 200px;
+    padding-bottom: 30px;
+  }
+  &-contact{
+    margin-left: 200px;
+    p{
+      margin-top: 30px;
+    }
+  }
+  &-icons{
+    @include d-flex;
+    column-gap: 40px;
+    margin-top: 50px;
+    font-size: 40px;
+    &__icon{
+      width: 60px;
+      height: 60px;
+      @include d-flex;
+      color:black;
+      border-radius: 50%;
+      outline: 2px solid black;
+      transition-property: outline-offset , outline-color , background-color;
+      transition: all .25s;
+      &:hover{
+        outline-offset: 4px;
+        animation: shake .3s;
+        color: white;
+      }
+    }
+    .icon--ins:hover{
+      background-image: radial-gradient(circle at 30% 107%,
+      #fdf497 0% , #fdf497 5% , 
+      #fd5949 20% , #d6249f 50% , 
+      #285AEB 90%);
+      outline-color: #a02d76 ;
+    }
+    .icon--face:hover{
+      background-color: #1da1f2;
+      outline-color: #1da1f2;
+    }
+    .icon--git:hover{
+      background-color: rgb(215, 68, 238);
+      outline-color: rgb(215, 68, 238) ;
+    }
+  }
+}
+
+@keyframes shake{
+  10%{transform: rotate(30deg)};
+  30%{transform: rotate(-30deg)};
+  50%{transform: rotate(30deg)};
+  70%{transform: rotate(-30deg)};
+}

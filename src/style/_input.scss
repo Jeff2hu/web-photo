@@ -1,0 +1,47 @@
+.input{
+  @include d-flex;
+  margin-left: 20px;
+  &-text{
+    position: relative;
+    &__description{
+      border-radius: 15px;
+      font-size: 24px;
+      width: 40vw;
+      padding: 5px;
+      line-height: 24px;
+      position: relative;
+      text-indent: 5%;
+      border: 3px solid #aaa;
+    }
+  }
+  &-button{
+    margin-left: 10px;
+    padding: 12px;
+    border-radius: 30px;
+    font-size: 16px;
+    color: white;
+    background-color: var(--primary);
+    cursor: pointer;
+    &:hover{
+      background-color: var(--secondary);
+    }
+  }
+  .search-icon{
+    color: #3a3a3a;
+    @include position-poa(11px,10px,0,0);
+  }
+}
+
+.input{
+  @media(max-width:768px) {
+    width: 100%;
+    margin: 0 auto;
+    &-text{
+      width: 100%;
+      &__description{
+        width: 80vw !important;
+        text-indent: 10%;
+      }
+    }
+  }
+}
